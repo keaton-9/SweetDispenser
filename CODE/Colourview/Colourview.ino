@@ -75,28 +75,28 @@ void loop() {
 
   // Here goes the switch case
 
-  if ( (red < 88 && red > 83) && (green < 88 && green > 83) && (blue < 101 && blue > 96)) //PURPLE
+  if ( (red < 90 && red > 82) && (green < 92 && green > 82) && (blue < 104 && blue > 94)) //PURPLE
   {
     Serial.println("PURPLE");
     Serial.println("R:\t"); Serial.print(int(red));
     Serial.print("\tG:\t"); Serial.print(int(green));
     Serial.print("\tB:\t"); Serial.print(int(blue));
   }
-  else if ( (red < 135 && red > 120) && (green < 77 && green > 73) && (blue < 87 && blue > 60)) //ORANGE
+  else if ( (red < 135 && red > 117) && (green < 87 && green > 76) && (blue < 84 && blue > 64)) //ORANGE
   {
     Serial.println("ORANGE");
     Serial.println("R:\t"); Serial.print(int(red));
     Serial.print("\tG:\t"); Serial.print(int(green));
     Serial.print("\tB:\t"); Serial.print(int(blue));
   }
-  else if ( (red < 87 && red > 81) && (green < 107 && green > 98) && (blue < 84 && blue > 76)) //GREEN
+  else if ( (red < 87 && red > 81) && (green < 110 && green > 98) && (blue < 88 && blue > 75)) //GREEN
   {
     Serial.println("GREEN");
     Serial.println("R:\t"); Serial.print(int(red));
     Serial.print("\tG:\t"); Serial.print(int(green));
     Serial.print("\tB:\t"); Serial.print(int(blue));
   }
-  else if ( (red < 124 && red > 118) && (green < 83 && green > 75) && (blue < 78 && blue > 74)) //RED
+  else if ( (red < 124 && red > 112) && (green < 84 && green > 75) && (blue < 84 && blue > 75)) //RED
   {
     Serial.println("RED");
     Serial.println("R:\t"); Serial.print(int(red));
@@ -106,12 +106,16 @@ void loop() {
   else
   {
     Serial.println("No Sweet Detected");
+        Serial.print("     R:\t"); Serial.print(int(red));
+    Serial.print("\tG:\t"); Serial.print(int(green));
+    Serial.print("\tB:\t"); Serial.print(int(blue));
   }
-
+/*
   Serial.print("\n");
   Serial.println("R:\t"); Serial.print(int(red));
   Serial.print("\tG:\t"); Serial.print(int(green));
   Serial.print("\tB:\t"); Serial.print(int(blue));
+  */
 
 #if defined(ARDUINO_ARCH_ESP32)
   ledcWrite(1, gammatable[(int)red]);

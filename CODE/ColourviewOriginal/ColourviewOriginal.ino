@@ -3,14 +3,14 @@
 
 // Pick analog outputs, for the UNO these three work well
 // use ~560  ohm resistor between Red & Blue, ~1K for green (its brighter)
-#define redpin 3
-#define greenpin 5
-#define bluepin 6
+#define redpin 1
+#define greenpin 2
+#define bluepin 3
 // for a common anode LED, connect the common pin to +5V
 // for common cathode, connect the common to ground
 
 // set to false if using a common cathode LED
-#define commonAnode true
+#define commonAnode false
 
 // our RGB -> eye-recognized gamma color
 byte gammatable[256];
